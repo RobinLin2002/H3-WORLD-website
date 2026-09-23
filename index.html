@@ -6,74 +6,46 @@
   <meta name="theme-color" content="#f8f7f2">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="description" content="Anonymous conference submission project page.">
-  <title>H3-World — Anonymous Submission</title>
+  <title>H3-World — Turning Language Understanding into World Control</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <main>
     <header class="hero page-width" id="top">
       <div class="venue-pill">INTERACTIVE WORLD MODELS · ANONYMOUS SUBMISSION</div>
-      <h1>H3-World:<span>Turning Language Understanding into World Control</span></h1>
+      <h1>H3-World:<span>Turning Language Understanding<br>into World Control</span></h1>
       <p class="summary">H3-World enables character and camera control across diverse visual environments.</p>
       <p class="anonymous-note">Anonymous project page for conference review</p>
       <nav class="link-row" aria-label="Project sections">
-        <a href="#abstract"><span>01</span>Abstract</a>
+        <a href="#demos"><span>01</span>Demos</a>
         <a href="#method"><span>02</span>Method</a>
-        <a href="#results"><span>03</span>Results</a>
-        <a href="#demos"><span>04</span>Demos</a>
+        <a href="#temporal-control"><span>03</span>Results</a>
       </nav>
     </header>
 
-    <section class="page-width hero-media" aria-label="Project teaser">
-      <figure class="teaser-figure">
-        <img src="assets/hero.jpg" alt="H3-World teaser showing diverse visual environments">
-        <figcaption><strong>H3-World</strong> enables character and camera control across diverse visual environments.</figcaption>
-      </figure>
-    </section>
-
-    <section class="paper-section" id="abstract">
-      <div class="page-width text-layout">
-        <div class="side-label"><span>01</span>ABSTRACT</div>
-        <div>
-          <h2>Abstract</h2>
-          <p class="abstract-lead">We introduce an action-controllable world model that translates keyboard input into temporally grounded video control.</p>
-          <p>H3-World converts character and camera actions into a short language instruction for each video latent frame. A directed attention mask binds each instruction to its corresponding frame, enabling precise action-to-motion control without adding action-specific modules.</p>
-          <p>Only a lightweight adaptation is trained on self-attention projections, allowing the same initial frame to produce different coherent trajectories under different keyboard schedules.</p>
-          <div class="highlight"><span>KEY TAKEAWAY</span><strong>Language conditions aligned with video latents create a lightweight interface for temporally precise world control.</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-width section" id="method">
-      <div class="section-heading"><span>02</span><div><h2>Language becomes a control sequence.</h2><p>Visual tokens and action descriptions share one packed sequence; directed attention aligns each instruction with its future visual latent.</p></div></div>
-      <figure class="method-figure"><img src="assets/method.png" alt="Method diagram showing action instructions and temporally aligned video generation"><figcaption><strong>Method overview.</strong> Actions are represented as language conditions and routed to the corresponding temporal positions.</figcaption></figure>
-    </section>
-
-    <section class="paper-section" id="results">
-      <div class="page-width text-layout">
-        <div class="side-label"><span>03</span>RESULTS</div>
-        <div>
-          <h2>Additional technical figures.</h2>
-          <p class="abstract-lead">High-resolution figures are provided locally for closer inspection during review.</p>
-          <div class="pdf-grid">
-            <a href="assets/figure-01-method.pdf" target="_blank" rel="noopener"><span>01</span><strong>Method overview</strong><em>Open PDF ↗</em></a>
-            <a href="assets/figure-02-conditioning.pdf" target="_blank" rel="noopener"><span>02</span><strong>Action conditioning</strong><em>Open PDF ↗</em></a>
-            <a href="assets/figure-03-generalization.pdf" target="_blank" rel="noopener"><span>03</span><strong>Action generalization</strong><em>Open PDF ↗</em></a>
-          </div>
-          <figure class="method-figure temporal-figure"><img src="assets/temporal-control.png" alt="Comparison of temporal action-control results"><figcaption><strong>Temporal control.</strong> The model follows action direction and timing across a scheduled sequence.</figcaption></figure>
-        </div>
-      </div>
+    <section class="page-width hero-media" aria-label="Paper teaser">
+      <figure class="teaser-figure"><img src="assets/hero.jpg" alt="H3-World teaser showing diverse visual environments"></figure>
     </section>
 
     <section class="page-width section" id="demos">
-      <div class="section-heading"><span>04</span><div><h2>Interactive world-control demos.</h2><p>Local demonstration videos only. This page has no analytics, visitor counters, or external account links.</p></div></div>
+      <div class="section-heading"><span>01</span><div><h2>Interactive world-control demos</h2><p>H3-World follows camera and character actions across diverse, open-ended visual environments.</p></div></div>
       <div class="demo-grid">
-        <article class="demo-card"><div class="demo-visual"><span class="demo-index">01</span><video controls muted loop playsinline preload="metadata" src="demos/demo-01.mp4"></video></div><h3>Neon alley</h3><p>First-person forward control in an urban environment.</p></article>
-        <article class="demo-card"><div class="demo-visual"><span class="demo-index">02</span><video controls muted loop playsinline preload="metadata" src="demos/demo-02.mp4"></video></div><h3>Lantern cave</h3><p>First-person exploration in a complex scene.</p></article>
-        <article class="demo-card"><div class="demo-visual"><span class="demo-index">03</span><video controls muted loop playsinline preload="metadata" src="demos/demo-03.mp4"></video></div><h3>Dune oasis</h3><p>Third-person navigation across an open landscape.</p></article>
-        <article class="demo-card"><div class="demo-visual"><span class="demo-index">04</span><video controls muted loop playsinline preload="metadata" src="demos/demo-04.mp4"></video></div><h3>Cathedral paladin</h3><p>Third-person motion in a detailed interior.</p></article>
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">01</span><video controls muted loop playsinline preload="metadata" src="demos/demo-01.mp4"></video></div><h3>Neon alley · fast pan right</h3><p>First-person camera control in a neon-lit city.</p></article>
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">02</span><video controls muted loop playsinline preload="metadata" src="demos/demo-02.mp4"></video></div><h3>Lantern cave · strafe left</h3><p>First-person lateral movement in a complex cave environment.</p></article>
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">03</span><video controls muted loop playsinline preload="metadata" src="demos/demo-03.mp4"></video></div><h3>Dune oasis · strafe right</h3><p>Third-person lateral navigation across an open desert scene.</p></article>
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">04</span><video controls muted loop playsinline preload="metadata" src="demos/demo-04.mp4"></video></div><h3>Cathedral paladin · tilt up</h3><p>Third-person upward camera motion in a detailed fantasy interior.</p></article>
       </div>
     </section>
+
+    <section class="paper-section" id="abstract"><div class="page-width text-layout"><div class="side-label"><span>02</span>ABSTRACT</div><div><h2>Abstract</h2><p class="abstract-lead">We introduce <strong>H3-World</strong>, an action-controllable world model that turns keyboard input into temporally grounded video control.</p><p>Built by fine-tuning MiniMax-H3 on gameplay footage, H3-World converts character and camera actions into a short English instruction for every video latent frame. These instructions are injected through the pretrained text pathway and aligned to their corresponding frames with a directed attention mask, enabling precise action-to-motion binding without adding action-specific trainable modules.</p><p>Only a rank-32 LoRA is trained on the self-attention projections. This lightweight adaptation produces controllable motion from the same initial frame under different action sequences, while supporting longer-horizon generation and generalization across diverse visual environments.</p><div class="highlight"><span>KEY TAKEAWAY</span><strong>Language-aligned action control enables a single world model to translate keyboard inputs into coherent, controllable video dynamics.</strong></div></div></div></section>
+
+    <section class="page-width section" id="method"><div class="section-heading"><span>03</span><div><h2>How H3-World works</h2><p>H3-World aligns language descriptions of keyboard actions with video latents, then adapts the pretrained H3 transformer with a lightweight LoRA.</p></div></div><figure class="method-figure"><img src="assets/method-hires.png" alt="H3-World method diagram"><figcaption><strong>Figure 1.</strong> H3-World packs visual tokens and latent-aligned action language into one sequence. A directed attention mask binds each action description to its corresponding visual latent, while LoRA adapts the H3 self-attention projections. <a href="assets/figure-01-method.pdf" target="_blank" rel="noopener">Open PDF ↗</a></figcaption></figure></section>
+
+    <section class="paper-section" id="temporal-control"><div class="page-width text-layout"><div class="side-label"><span>04</span>TEMPORAL CONTROL</div><div><h2>Temporally specified control</h2><p class="abstract-lead">H3-World follows different camera instructions at different moments within the same video.</p><figure class="method-figure"><img src="assets/temporal-control.png" alt="Temporal control comparison"><figcaption><strong>Figure 2.</strong> The instruction requests a sharp left pan in the first half and a sharp right pan in the second half. Global prompting provides coarse motion but misses the scheduled switch. The frozen per-latent interface remains nearly static. <strong>H3-World follows both actions in their requested time intervals.</strong></figcaption></figure><div class="control-summary"><div><strong>Global prompt</strong><span>Responds to motion, but not to the full schedule.</span></div><div><strong>Per-latent, no LoRA</strong><span>Has the interface, but produces almost no motion.</span></div><div><strong>H3-World</strong><span>Controls action direction and when each action happens.</span></div></div></div></div></section>
+
+    <section class="page-width section" id="action-controllability"><div class="section-heading"><span>05</span><div><h2>Action controllability</h2><p>Grounding actions in the pretrained language pathway yields coordinated character motion and camera control.</p></div></div><figure class="method-figure"><img src="assets/action-conditioning-hires.png" alt="Comparison of direct action conditioning and H3-World"><figcaption><strong>Figure 3.</strong> Action-conditioning interfaces on a held-out gameplay clip. Direct additive-bias and FiLM conditioning lead to limited or inconsistent responses to the recorded keyboard controls. <strong>Text-based H3-World produces coordinated character and camera changes throughout the sequence.</strong> <a href="assets/figure-02-conditioning.pdf" target="_blank" rel="noopener">Open PDF ↗</a></figcaption></figure><div class="control-summary"><div><strong>Additive bias</strong><span>Adding action vectors to video features yields weak and unreliable control.</span></div><div><strong>FiLM conditioning</strong><span>Feature-wise modulation can cause incorrect movement or camera responses.</span></div><div><strong>H3-World</strong><span>Language-grounded actions preserve the scene while following the recorded controls.</span></div></div></section>
+
+    <section class="paper-section" id="generalization"><div class="page-width text-layout"><div class="side-label"><span>06</span>GENERALIZATION</div><div><h2>Compositional generalization</h2><p class="abstract-lead">H3-World combines familiar character and camera primitives into action pairs never observed during training.</p><figure class="method-figure"><img src="assets/compositional-generalization-hires.png" alt="Seen and unseen compositional action generalization"><figcaption><strong>Figure 4.</strong> Compositional action generalization on held-out gameplay and out-of-distribution observations. H3-World follows an unseen combination of observed character and camera clauses while retaining the initial scene content. <a href="assets/figure-03-generalization.pdf" target="_blank" rel="noopener">Open PDF ↗</a></figcaption></figure><div class="generalization-note"><strong>Beyond seen combinations.</strong><span>Although the unseen action pair never appears in training, both of its components are familiar. H3-World composes them into coherent control in gameplay and new visual worlds.</span></div></div></div></section>
   </main>
   <footer><div class="page-width"><span>H3-WORLD · ANONYMOUS SUBMISSION</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
