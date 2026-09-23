@@ -1,83 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta name="description" content="Anonymous conference submission project page.">
-    <title>Anonymous Submission | Interactive World Control</title>
-    <link rel="stylesheet" href="assets/styles.css">
-  </head>
-  <body>
-    <main>
-      <header class="hero" id="top">
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="#top">Anonymous Submission</a>
-          <div>
-            <a href="#abstract">Abstract</a>
-            <a href="#approach">Approach</a>
-            <a href="#figures">Figures</a>
-            <a href="#demos">Demos</a>
-          </div>
-        </nav>
-        <div class="hero__content">
-          <p class="eyebrow">INTERACTIVE WORLD MODELS</p>
-          <h1>Language-conditioned<br><em>world control.</em></h1>
-          <p class="hero__statement">A world-model approach for translating action schedules into temporally grounded video control.</p>
-          <p class="anonymous-note">Anonymous project page for conference review</p>
-        </div>
-      </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f2">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Anonymous conference submission project page.">
+  <title>H3-World — Anonymous Submission</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main>
+    <header class="hero page-width" id="top">
+      <div class="venue-pill">INTERACTIVE WORLD MODELS · ANONYMOUS SUBMISSION</div>
+      <h1>H3-World:<span>Turning Language Understanding into World Control</span></h1>
+      <p class="summary">H3-World enables character and camera control across diverse visual environments.</p>
+      <p class="anonymous-note">Anonymous project page for conference review</p>
+      <nav class="link-row" aria-label="Project sections">
+        <a href="#abstract"><span>01</span>Abstract</a>
+        <a href="#method"><span>02</span>Method</a>
+        <a href="#results"><span>03</span>Results</a>
+        <a href="#demos"><span>04</span>Demos</a>
+      </nav>
+    </header>
 
-      <section class="section split" id="abstract">
-        <p class="section-index">01 / ABSTRACT</p>
+    <section class="page-width hero-media" aria-label="Project teaser">
+      <figure class="teaser-figure">
+        <img src="assets/hero.jpg" alt="H3-World teaser showing diverse visual environments">
+        <figcaption><strong>H3-World</strong> enables character and camera control across diverse visual environments.</figcaption>
+      </figure>
+    </section>
+
+    <section class="paper-section" id="abstract">
+      <div class="page-width text-layout">
+        <div class="side-label"><span>01</span>ABSTRACT</div>
         <div>
-          <h2>From actions to coherent trajectories.</h2>
-          <p class="lead">We study controllable video generation where character and camera actions must occur at precise moments.</p>
-          <p>Our approach encodes an action schedule as language instructions aligned with individual video latents. Directed attention binds each instruction to its corresponding future state, enabling an action-controllable model without a separate action-specific interface.</p>
-          <div class="takeaway"><span>KEY IDEA</span><strong>Temporal language conditions provide a lightweight interface for frame-aligned world control.</strong></div>
+          <h2>Abstract</h2>
+          <p class="abstract-lead">We introduce an action-controllable world model that translates keyboard input into temporally grounded video control.</p>
+          <p>H3-World converts character and camera actions into a short language instruction for each video latent frame. A directed attention mask binds each instruction to its corresponding frame, enabling precise action-to-motion control without adding action-specific modules.</p>
+          <p>Only a lightweight adaptation is trained on self-attention projections, allowing the same initial frame to produce different coherent trajectories under different keyboard schedules.</p>
+          <div class="highlight"><span>KEY TAKEAWAY</span><strong>Language conditions aligned with video latents create a lightweight interface for temporally precise world control.</strong></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section approach" id="approach">
-        <div class="section-heading">
-          <p class="section-index">02 / APPROACH</p>
-          <div><h2>A language sequence becomes a control sequence.</h2><p>Each stage preserves the connection between requested actions and future visual states.</p></div>
-        </div>
-        <div class="pipeline">
-          <article><span>01</span><h3>Observe</h3><p>Start from an initial visual state and an action schedule.</p></article>
-          <div class="arrow" aria-hidden="true">→</div>
-          <article class="pipeline__focus"><span>02</span><h3>Align</h3><p>Bind language conditions to matching temporal latents through directed attention.</p></article>
-          <div class="arrow" aria-hidden="true">→</div>
-          <article><span>03</span><h3>Control</h3><p>Generate a coherent trajectory that follows the requested sequence.</p></article>
-        </div>
-      </section>
+    <section class="page-width section" id="method">
+      <div class="section-heading"><span>02</span><div><h2>Language becomes a control sequence.</h2><p>Visual tokens and action descriptions share one packed sequence; directed attention aligns each instruction with its future visual latent.</p></div></div>
+      <figure class="method-figure"><img src="assets/method.png" alt="Method diagram showing action instructions and temporally aligned video generation"><figcaption><strong>Method overview.</strong> Actions are represented as language conditions and routed to the corresponding temporal positions.</figcaption></figure>
+    </section>
 
-      <section class="section figures" id="figures">
-        <div class="section-heading">
-          <p class="section-index">03 / FIGURES</p>
-          <div><h2>Additional technical figures.</h2><p>High-resolution figures are provided as local PDF files for closer inspection during review.</p></div>
+    <section class="paper-section" id="results">
+      <div class="page-width text-layout">
+        <div class="side-label"><span>03</span>RESULTS</div>
+        <div>
+          <h2>Additional technical figures.</h2>
+          <p class="abstract-lead">High-resolution figures are provided locally for closer inspection during review.</p>
+          <div class="pdf-grid">
+            <a href="assets/figure-01-method.pdf" target="_blank" rel="noopener"><span>01</span><strong>Method overview</strong><em>Open PDF ↗</em></a>
+            <a href="assets/figure-02-conditioning.pdf" target="_blank" rel="noopener"><span>02</span><strong>Action conditioning</strong><em>Open PDF ↗</em></a>
+            <a href="assets/figure-03-generalization.pdf" target="_blank" rel="noopener"><span>03</span><strong>Action generalization</strong><em>Open PDF ↗</em></a>
+          </div>
+          <figure class="method-figure temporal-figure"><img src="assets/temporal-control.png" alt="Comparison of temporal action-control results"><figcaption><strong>Temporal control.</strong> The model follows action direction and timing across a scheduled sequence.</figcaption></figure>
         </div>
-        <div class="figure-links">
-          <a href="assets/figure-01-method.pdf" target="_blank" rel="noopener"><span>01</span><strong>Method overview</strong><em>Open PDF ↗</em></a>
-          <a href="assets/figure-02-conditioning.pdf" target="_blank" rel="noopener"><span>02</span><strong>Action conditioning</strong><em>Open PDF ↗</em></a>
-          <a href="assets/figure-03-generalization.pdf" target="_blank" rel="noopener"><span>03</span><strong>Action generalization</strong><em>Open PDF ↗</em></a>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="demos" id="demos">
-        <div class="section demos__heading">
-          <p class="section-index">04 / DEMONSTRATIONS</p>
-          <h2>One interface, diverse worlds.</h2>
-          <p>Each clip shows a distinct environment and action schedule. Videos are served locally; this page contains no analytics or visitor tracking.</p>
-        </div>
-        <div class="demo-grid">
-          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-01.mp4"></video><figcaption><strong>Demo 01</strong><span>Forward motion in an urban scene.</span></figcaption></figure>
-          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-02.mp4"></video><figcaption><strong>Demo 02</strong><span>First-person exploration in a complex environment.</span></figcaption></figure>
-          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-03.mp4"></video><figcaption><strong>Demo 03</strong><span>Navigation across an open landscape.</span></figcaption></figure>
-          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-04.mp4"></video><figcaption><strong>Demo 04</strong><span>Character motion in a detailed interior.</span></figcaption></figure>
-        </div>
-      </section>
-    </main>
-    <footer><span>ANONYMOUS CONFERENCE SUBMISSION</span><a href="#top">Back to top ↑</a></footer>
-  </body>
+    <section class="page-width section" id="demos">
+      <div class="section-heading"><span>04</span><div><h2>Interactive world-control demos.</h2><p>Local demonstration videos only. This page has no analytics, visitor counters, or external account links.</p></div></div>
+      <div class="demo-grid">
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">01</span><video controls muted loop playsinline preload="metadata" src="demos/demo-01.mp4"></video></div><h3>Neon alley</h3><p>First-person forward control in an urban environment.</p></article>
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">02</span><video controls muted loop playsinline preload="metadata" src="demos/demo-02.mp4"></video></div><h3>Lantern cave</h3><p>First-person exploration in a complex scene.</p></article>
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">03</span><video controls muted loop playsinline preload="metadata" src="demos/demo-03.mp4"></video></div><h3>Dune oasis</h3><p>Third-person navigation across an open landscape.</p></article>
+        <article class="demo-card"><div class="demo-visual"><span class="demo-index">04</span><video controls muted loop playsinline preload="metadata" src="demos/demo-04.mp4"></video></div><h3>Cathedral paladin</h3><p>Third-person motion in a detailed interior.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="page-width"><span>H3-WORLD · ANONYMOUS SUBMISSION</span><a href="#top">Back to top ↑</a></div></footer>
+</body>
 </html>
