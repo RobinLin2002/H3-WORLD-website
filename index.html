@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="description" content="Anonymous conference submission project page.">
+    <title>Anonymous Submission | Interactive World Control</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <main>
+      <header class="hero" id="top">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="#top">Anonymous Submission</a>
+          <div>
+            <a href="#abstract">Abstract</a>
+            <a href="#approach">Approach</a>
+            <a href="#demos">Demos</a>
+          </div>
+        </nav>
+        <div class="hero__content">
+          <p class="eyebrow">INTERACTIVE WORLD MODELS</p>
+          <h1>Language-conditioned<br><em>world control.</em></h1>
+          <p class="hero__statement">A world-model approach for translating action schedules into temporally grounded video control.</p>
+          <p class="anonymous-note">Anonymous project page for conference review</p>
+        </div>
+      </header>
+
+      <section class="section split" id="abstract">
+        <p class="section-index">01 / ABSTRACT</p>
+        <div>
+          <h2>From actions to coherent trajectories.</h2>
+          <p class="lead">We study controllable video generation where character and camera actions must occur at precise moments.</p>
+          <p>Our approach encodes an action schedule as language instructions aligned with individual video latents. Directed attention binds each instruction to its corresponding future state, enabling an action-controllable model without a separate action-specific interface.</p>
+          <div class="takeaway"><span>KEY IDEA</span><strong>Temporal language conditions provide a lightweight interface for frame-aligned world control.</strong></div>
+        </div>
+      </section>
+
+      <section class="section approach" id="approach">
+        <div class="section-heading">
+          <p class="section-index">02 / APPROACH</p>
+          <div><h2>A language sequence becomes a control sequence.</h2><p>Each stage preserves the connection between requested actions and future visual states.</p></div>
+        </div>
+        <div class="pipeline">
+          <article><span>01</span><h3>Observe</h3><p>Start from an initial visual state and an action schedule.</p></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="pipeline__focus"><span>02</span><h3>Align</h3><p>Bind language conditions to matching temporal latents through directed attention.</p></article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article><span>03</span><h3>Control</h3><p>Generate a coherent trajectory that follows the requested sequence.</p></article>
+        </div>
+      </section>
+
+      <section class="demos" id="demos">
+        <div class="section demos__heading">
+          <p class="section-index">03 / DEMONSTRATIONS</p>
+          <h2>One interface, diverse worlds.</h2>
+          <p>Each clip shows a distinct environment and action schedule. Videos are served locally; this page contains no analytics or visitor tracking.</p>
+        </div>
+        <div class="demo-grid">
+          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-01.mp4"></video><figcaption><strong>Demo 01</strong><span>Forward motion in an urban scene.</span></figcaption></figure>
+          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-02.mp4"></video><figcaption><strong>Demo 02</strong><span>First-person exploration in a complex environment.</span></figcaption></figure>
+          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-03.mp4"></video><figcaption><strong>Demo 03</strong><span>Navigation across an open landscape.</span></figcaption></figure>
+          <figure><video controls muted loop playsinline preload="metadata" src="demos/demo-04.mp4"></video><figcaption><strong>Demo 04</strong><span>Character motion in a detailed interior.</span></figcaption></figure>
+        </div>
+      </section>
+    </main>
+    <footer><span>ANONYMOUS CONFERENCE SUBMISSION</span><a href="#top">Back to top ↑</a></footer>
+  </body>
+</html>
